@@ -32,10 +32,10 @@ export default function LoginForm2() {
       {/* Overlay com gradiente laranja para transparente */}
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 via-orange-400/10 to-transparent pointer-events-none"></div>
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8">
-        {/* Logo Section - apenas em telas muito grandes */}
+      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen items-center justify-center px-4 py-8 gap-8">
+        {/* Logo - aparece em todas as telas, muda posição pelo flex */}
         <motion.div
-          className="hidden xl:flex flex-1 items-center justify-center max-w-md mr-34"
+          className="flex items-center justify-center max-w-md lg:mr-34"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -49,12 +49,12 @@ export default function LoginForm2() {
             <img
               src="/logo.png"
               alt="Logo"
-              className="mx-auto max-h-32 w-auto object-contain drop-shadow-lg mb-6"
+              className="mx-auto max-h-32 w-auto object-contain drop-shadow-lg mb-6 lg:mb-0"
             />
           </motion.div>
         </motion.div>
 
-        {/* Login Form - tamanho mínimo e responsivo */}
+        {/* Login Form */}
         <motion.div
           className="w-full max-w-sm"
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
@@ -131,7 +131,7 @@ export default function LoginForm2() {
                 </div>
               </motion.div>
 
-              {/* Stay Connected Switch */}
+              {/* Stay Connected */}
               <motion.div
                 className="flex items-center justify-between"
                 initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ export default function LoginForm2() {
                 />
               </motion.div>
 
-              {/* Login Button */}
+              {/* Botão Entrar */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -172,10 +172,9 @@ export default function LoginForm2() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-border/50"></div>
                 </div>
-                <div className="relative flex justify-center text-xs"></div>
               </motion.div>
 
-              {/* Forgot Password Button */}
+              {/* Esqueci minha senha */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -197,8 +196,7 @@ export default function LoginForm2() {
         </motion.div>
       </div>
 
-      {/* Modal Esqueci Senha - Descomente quando importar o componente */}
-
+      {/* Modal Esqueci Senha */}
       <ForgotPasswordModal
         isOpen={showForgotPasswordModal}
         onClose={closeForgotPasswordModal}
