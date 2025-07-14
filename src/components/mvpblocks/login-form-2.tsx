@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, KeyRound, User } from "lucide-react";
 import ForgotPasswordModal from "../ForgotPasswordModal";
+import CuriosidadesFauna from "@/components/CuriosidadesFauna";
 
 export default function LoginForm2() {
   const [showPassword, setShowPassword] = useState(false);
@@ -32,7 +33,7 @@ export default function LoginForm2() {
       {/* Overlay com gradiente laranja para transparente */}
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 via-orange-400/10 to-transparent pointer-events-none"></div>
 
-      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen items-center justify-center px-4 py-8 gap-8">
+      <div className="relative z-10 flex flex-col lg:flex-row min-h-screen items-center justify-center px-4 py-2 gap-8">
         {/* Logo - aparece em todas as telas, muda posição pelo flex */}
         <motion.div
           className="flex items-center justify-center max-w-md lg:mr-34"
@@ -44,13 +45,16 @@ export default function LoginForm2() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-center"
+            className="flex flex-col items-center justify-center gap-2"
           >
             <img
               src="/logo.png"
               alt="Logo"
-              className="mx-auto max-h-32 w-auto object-contain drop-shadow-lg mb-6 lg:mb-0"
+              className="mx-auto max-h-32 w-auto object-contain drop-shadow-lg"
             />
+            <div className="h-10 md:h-12 lg:h-15 w-full overflow-hidden">
+              <CuriosidadesFauna />
+            </div>
           </motion.div>
         </motion.div>
 

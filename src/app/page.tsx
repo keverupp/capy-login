@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* LoginForm2 por cima do background */}
-      <div className="relative z-10 min-h-screen">
+      <div className="relative z-10">
         <LoginForm2 />
       </div>
     </div>
