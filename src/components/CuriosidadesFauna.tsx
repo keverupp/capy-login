@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 const curiosidades = [
   "Sabia que o tamanduá é o maior antivírus do cerrado?",
   "Você é o visitante nº 10.000… mas sem prêmio, foi mal.",
-  "Quer seed eterno? Planta ipê-amarelo: floresce todo ano.",
   "Capivarias se comunicam no protocolo grunhido 2.0 — criptografia natural.",
   "O tamanduá tem língua de 60cm — seria o melhor cabinho de rede orgânico.",
-  "Esse site usa cookies — mas capivara prefere grama mesmo.",
+  "Esse site usa cookies — mas capivaras preferem grama mesmo.",
   "Tamanduá come 30 mil formigas por dia — dieta low carb raiz.",
   "Capivara é zen master brasileira — medita em qualquer lugar, até com jacaré do lado.",
 ];
