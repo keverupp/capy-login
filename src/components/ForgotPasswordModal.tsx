@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import { KeyRound, Mail, X, Check, Loader2 } from "lucide-react";
+import { KeyRound, Mail, Check, Loader2 } from "lucide-react";
 
 interface ForgotPasswordModalProps {
   isOpen: boolean;
@@ -87,15 +87,6 @@ export default function ForgotPasswordModal({
                       Esqueci minha senha
                     </h3>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={handleClose}
-                    className="h-8 w-8 p-0"
-                    disabled={isSubmitting}
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
                 </div>
 
                 {/* Content */}

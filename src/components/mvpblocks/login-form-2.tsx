@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff, KeyRound, User } from "lucide-react";
 import ForgotPasswordModal from "../ForgotPasswordModal";
 import CuriosidadesFauna from "@/components/CuriosidadesFauna";
+import { Separator } from "../ui/separator";
 
 export default function LoginForm2() {
   const [showPassword, setShowPassword] = useState(false);
@@ -78,7 +79,7 @@ export default function LoginForm2() {
                   Entrar
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Entre na sua conta para acessar a plataforma
+                  Faça login para acessar a plataforma
                 </p>
               </motion.div>
 
@@ -146,7 +147,7 @@ export default function LoginForm2() {
                   htmlFor="stay-connected"
                   className="text-sm font-medium cursor-pointer"
                 >
-                  Manter conectado
+                  Lembre-se de mim
                 </Label>
                 <Switch
                   id="stay-connected"
@@ -169,13 +170,11 @@ export default function LoginForm2() {
               {/* Divider */}
               <motion.div
                 className="relative"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.85, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.75, ease: "easeOut" }}
               >
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-border/50"></div>
-                </div>
+                <Separator></Separator>
               </motion.div>
 
               {/* Esqueci minha senha */}
