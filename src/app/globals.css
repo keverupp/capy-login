@@ -122,3 +122,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Evita o botão nativo do Chromium/Edge */
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-password-reveal-button,
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}

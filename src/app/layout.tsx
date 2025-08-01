@@ -15,8 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Login - CapybaraBR",
-  description:
-    "Login CapybaraBR",
+  description: "Login CapybaraBR",
 };
 
 export default function RootLayout({
@@ -31,8 +30,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           {children}
